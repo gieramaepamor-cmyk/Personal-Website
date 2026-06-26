@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Gieramae Pamor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css?v=27">
+</head>
+<body class="project-details-page">
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-blob a-blob-1" id="aBlob1"></div>
+        <div class="ambient-blob a-blob-2" id="aBlob2"></div>
+        <div class="ambient-blob a-blob-3" id="aBlob3"></div>
+        <div class="ambient-blob a-blob-4" id="aBlob4"></div>
+    </div>
+
+    <div class="pd2-container">
+
+        <!-- Navigation -->
+        <div class="pd2-nav">
+            <a href="index.html?skipIntro=true" class="pd2-back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="pd2-breadcrumbs">
+                <span>Portfolio</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span id="pd-breadcrumb-title">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Main Grid Layout -->
+        <div class="pd2-grid">
+
+            <div class="pd2-left scroll-reveal" style="transition-delay: 0.1s;">
+                <h1 class="pd2-title" id="pd-title">Loading...</h1>
+
+                <div class="pd2-desc-box">
+                    <p id="pd-desc">Loading project details...</p>
+                </div>
+
+                <div class="pd2-tech-section">
+                    <div class="pd2-tech-header">
+                        <i class="fa-solid fa-code"></i> Technologies Used
+                    </div>
+                    <div class="pd2-tech-chips" id="pd-tech-list">
+                        
+                    </div>
+                </div>
+
+                <div class="pd2-features-card">
+                    <div class="pd2-features-label">Key Features:</div>
+                    <ul class="pd2-features-list" id="pd-features-list">
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pd2-right scroll-reveal" style="transition-delay: 0.3s;">
+
+                <div class="pd2-image-wrapper">
+                    <img id="pd-main-img" src="" alt="Project Screenshot">
+                    <div class="pd2-image-overlay"></div>
+                    <a id="pd-github-link" href="#" target="_blank" class="pd2-github-btn">
+                        <i class="fa-brands fa-github"></i> View on Github
+                    </a>
+                </div>
+
+                <div class="pd2-responsibilities">
+                    <div class="pd2-resp-label">Responsibilities:</div>
+                    <ul class="pd2-resp-list" id="pd-responsibilities-list">
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const projectData = {
+                'project-portfolio': {
+                    title: 'Portfolio Website',
+                    tag: 'Web Development',
+                    desc: 'Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript. The objective was to create a clean UI and user-friendly interface that reflects my personal brand and technical capabilities while incorporating modern web design principles such as glassmorphism and smooth animations.',
+                    image: 'assets/images/profile.png',
+                    stats: [
+                        { count: '3', label: 'Core Technologies' },
+                        { count: '1', label: 'Developer' }
+                    ],
+                    features: [
+                        'Responsive frontend layout with modern glassmorphism design.',
+                        'Scroll-reveal animations and custom interactive blobs.',
+                        'Dynamic project details loading via JavaScript.'
+                    ],
+                    responsibilities: [
+                        'Designed the entire UI/UX layout emphasizing modern aesthetics.',
+                        'Developed the frontend using vanilla HTML, CSS, and JS.'
+                    ],
+                    tech: [
+                        { name: 'HTML5', icon: 'fa-html5' },
+                        { name: 'CSS3', icon: 'fa-css3-alt' },
+                        { name: 'JavaScript', icon: 'fa-js' }
+                    ],
+                    demoLink: 'https://github.com/gieramaepamor-cmyk',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk'
+                },
+                'project-timplados': {
+                    title: 'Timplados Restaurant',
+                    tag: 'Web Development',
+                    desc: 'A modern restaurant landing page developed using HTML5 and CSS3, featuring a responsive design and clean user interface tailored for showcasing restaurant information and branding.',
+                    image: 'assets/projects/timplados.png',
+                    stats: [
+                        { count: '3', label: 'Core Technologies' },
+                        { count: '5', label: 'Key Pages' }
+                    ],
+                    features: [
+                        'Fully responsive design for mobile and desktop devices.',
+                        'Structured presentation of menus, business information, and branding elements.',
+                        'Lightweight implementation focused on performance and accessibility.'
+                    ],
+                    responsibilities: [
+                        'Collaborated with team members in the development of the website.',
+                        'Led the visual design and styling of the website using CSS3.',
+                        'Implemented responsive layouts and optimized the user interface across different screen sizes.'
+                    ],
+                    tech: [
+                        { name: 'HTML5', icon: 'fa-html5' },
+                        { name: 'CSS3', icon: 'fa-css3-alt' }
+                    ],
+                    demoLink: 'https://github.com/gieramaepamor-cmyk/Timplados-Website',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk/Timplados-Website'
+                },
+                'project-adventure': {
+                    title: 'The Final Adventure',
+                    tag: 'Game Development',
+                    desc: 'A 2D web-based adventure game developed as an individual project using the Godot Engine. The game features player exploration, interactive environments, and browser-based gameplay, and is publicly accessible through GitHub Pages.',
+                    image: 'assets/projects/finaladventure.png',
+                    stats: [
+                        { count: '3', label: 'Core Technologies' },
+                        { count: '10+', label: 'Levels' }
+                    ],
+                    features: [
+                        'Smooth 2D character movement and collision detection.',
+                        'Interactive environments and level progression mechanics.',
+                        'Game state management, menu navigation, and user interface systems.',
+                        'Browser-based gameplay hosted via GitHub Pages.'
+                    ],
+                    responsibilities: [
+                        'Independently designed and developed the entire game from concept to deployment.',
+                        'Created game assets, animations, tilemaps, and level layouts.',
+                        'Implemented gameplay mechanics, player controls, and game logic using GDScript.',
+                        'Published, tested, and optimized the game for a smooth browser-based experience.'
+                    ],
+                    tech: [
+                        { name: 'Godot Engine', icon: 'fa-gamepad' },
+                        { name: 'GDScript', icon: 'fa-code' }
+                    ],
+                    demoLink: 'https://github.com/gieramaepamor-cmyk/Final-Adventure-Godot-Engine',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk/Final-Adventure-Godot-Engine'
+                },
+                'project-piglet': {
+                    title: 'Piglet Escape',
+                    tag: 'Mobile Application',
+                    desc: 'A 2D Android mobile game developed using Java and Android Studio. The game features touch-based controls, obstacle navigation, and score tracking designed for a smooth mobile gaming experience.',
+                    image: 'assets/projects/pigletescape.png',
+                    stats: [
+                        { count: '3', label: 'Core Technologies' },
+                        { count: '1', label: 'Game Mode' }
+                    ],
+                    features: [
+                        'Touch-responsive controls optimized for mobile devices.',
+                        'Adaptive user interface supporting multiple Android screen sizes.',
+                        'Score tracking and game state management.',
+                        'Lightweight gameplay architecture focused on performance and responsiveness.'
+                    ],
+                    responsibilities: [
+                        'Designed and developed the game using Java and Android Studio.',
+                        'Implemented player movement, touch controls, and gameplay mechanics.',
+                        'Created and integrated user interface layouts for different screen sizes.',
+                        'Tested and debugged the application across Android emulators and devices to ensure functionality and performance.'
+                    ],
+                    tech: [
+                        { name: 'Android Studio', icon: 'fa-android' },
+                        { name: 'Java', icon: 'fa-java' }
+                    ],
+                    demoLink: 'https://github.com/gieramaepamor-cmyk/Piglet-Escape-Mobile-Game',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk/Piglet-Escape-Mobile-Game'
+                },
+                'project-pos': {
+                    title: 'Ghillan\'z POS System',
+                    tag: 'Desktop Application',
+                    desc: 'A desktop Point-of-Sale (POS) application developed using VB.NET in Visual Studio. The system streamlines retail transactions through user authentication, inventory management, and automated sales processing.',
+                    image: 'assets/projects/ghillanz.png',
+                    stats: [
+                        { count: '3', label: 'Core Technologies' },
+                        { count: '5+', label: 'Modules' }
+                    ],
+                    features: [
+                        'Role-based authentication for administrator and cashier accounts.',
+                        'Transaction processing with automated total calculations.',
+                        'Inventory management and stock monitoring functionalities.',
+                        'Object-oriented architecture designed for maintainability and scalability.'
+                    ],
+                    responsibilities: [
+                        'Designed and developed the entire POS system using VB.NET and Visual Studio.',
+                        'Implemented user authentication, inventory management, and transaction processing features.',
+                        'Applied OOP principles and performed testing and debugging to ensure system reliability.'
+                    ],
+                    tech: [
+                        { name: 'VB .NET', icon: 'fa-windows' },
+                        { name: 'Visual Studio', icon: 'fa-microsoft' },
+                        { name: 'Windows Forms', icon: 'fa-desktop' }
+                    ],
+                    demoLink: 'https://github.com/gieramaepamor-cmyk/Ghillanz-POS-System-Visual-Basic',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk/Ghillanz-POS-System-Visual-Basic'
+                },
+                'project-tempguard': {
+                    title: 'Tempguard',
+                    tag: 'IoT Capstone Project',
+                    desc: 'An award-winning capstone project that combines IoT and web technologies to monitor environmental conditions in real time. The system provides temperature and humidity tracking, predictive heat index forecasting, and automated alerts through a web-based dashboard.',
+                    image: 'assets/projects/tempguard.png',
+                    stats: [
+                        { count: '4', label: 'Core Technologies' },
+                        { count: '3', label: 'Sensors' }
+                    ],
+                    features: [
+                        'Real-time temperature and humidity monitoring.',
+                        'Predictive heat index forecasting using OpenWeather API data for Malolos.',
+                        'Interactive dashboard with historical data visualization.',
+                        'Automated alerts for critical environmental conditions.'
+                    ],
+                    responsibilities: [
+                        'Led the full-stack development of the web application.',
+                        'Developed frontend and backend functionalities for monitoring and data management.',
+                        'Integrated sensor data and OpenWeather API services into the platform.',
+                        'Conducted software testing, debugging, and deployment.'
+                    ],
+                    tech: [
+                        { name: 'HTML5', icon: 'fa-html5' },
+                        { name: 'CSS3', icon: 'fa-css3-alt' },
+                        { name: 'JavaScript', icon: 'fa-js' },
+                        { name: 'Firebase', icon: 'fa-database' },
+                        { name: 'Arduino IDE', icon: 'fa-microchip' }
+                    ],
+                    demoLink: 'https://tempguard-system.web.app/',
+                    githubLink: 'https://github.com/gieramaepamor-cmyk',
+                    siteLink: 'https://tempguard-system.web.app/'
+                }
+            };
+
+            if (document.body.classList.contains('project-details-page')) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const projectId = urlParams.get('id');
+                const data = projectData[projectId];
+        
+                if (data) {
+
+                    document.getElementById('pd-breadcrumb-title').textContent = data.title;
+                    
+                    const titleEl = document.getElementById('pd-title');
+                    if (titleEl) {
+                        titleEl.textContent = data.title;
+                        titleEl.style.fontSize = '';
+                    }
+        
+                    document.getElementById('pd-desc').textContent = data.desc;
+                    document.getElementById('pd-main-img').src = data.image;
+                    document.getElementById('pd-main-img').alt = data.title;
+        
+                    const githubLinkEl = document.getElementById('pd-github-link');
+                    if (githubLinkEl) {
+                        if (data.siteLink) {
+                            githubLinkEl.href = data.siteLink;
+                            githubLinkEl.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> View Website';
+                        } else {
+                            githubLinkEl.href = data.githubLink;
+                            githubLinkEl.innerHTML = '<i class="fa-brands fa-github"></i> View on GitHub';
+                        }
+                    }
+        
+                    const techContainer = document.getElementById('pd-tech-list');
+                    if (techContainer && data.tech) {
+                        techContainer.innerHTML = data.tech.map(t =>
+                            `<div class="pd2-tech-chip"><i class="fa-solid fa-cube"></i> ${t.name}</div>`
+                        ).join('');
+                    }
+        
+                    // Key Features list (left column card)
+                    const featuresContainer = document.getElementById('pd-features-list');
+                    if (featuresContainer && data.features) {
+                        featuresContainer.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+                    }
+        
+                    // Responsibilities list (right column)
+                    const responsibilitiesContainer = document.getElementById('pd-responsibilities-list');
+                    if (responsibilitiesContainer && data.responsibilities) {
+                        responsibilitiesContainer.innerHTML = data.responsibilities.map(r => `<li>${r}</li>`).join('');
+                    }
+        
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            document.body.classList.add('page-visible');
+                        });
+                    });
+
+                    const backBtn = document.querySelector('.pd-back-btn');
+                    if (backBtn) {
+                        backBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const href = backBtn.getAttribute('href');
+                            document.body.classList.add('page-leaving-slow');
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 600); 
+                        });
+                    }
+                } else {
+ 
+                    window.location.href = 'index.html';
+                }
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

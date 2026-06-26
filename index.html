@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Gieramae Pamor, a passionate Bachelor of Science in Computer Engineering graduate from La Consolacion University Philippines. Seeking entry-level roles in software, web, and technology development.">
+    <meta name="keywords" content="Gieramae Pamor, Computer Engineering Graduate, Portfolio, Web Developer, Software Engineer, Philippines, La Consolacion University Philippines, TempGuard, POS System, Arduino">
+    <meta name="author" content="Gieramae Pamor">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gieramae Pamor | Computer Engineering Graduate & Developer">
+    <meta property="og:description" content="Discover the professional portfolio of Gieramae Pamor—showcasing software engineering, web development, and embedded systems projects.">
+    <meta property="og:image" content="assets/images/profile.png">
+    
+    <title>Gieramae Pamor | Computer Engineering Graduate Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=27">
+
+    <script>
+        if (new URLSearchParams(window.location.search).get('skipIntro') === 'true') {
+            document.documentElement.classList.add('skip-intro');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Intro Splash Screen -->
+    <div id="intro-splash" class="intro-splash">
+        <div class="intro-inner">
+            <div class="intro-logo-wrap">
+                <div class="intro-circle">GP</div>
+            </div>
+            <div class="intro-text-wrap">
+                <span class="intro-name" id="intro-name">Welcome to My Personal Website</span>
+                <span class="intro-role" id="intro-role">Gieramae Pamor</span>
+            </div>
+            <div class="intro-progress-bar"><div class="intro-progress-fill" id="intro-bar"></div></div>
+        </div>
+        <div class="intro-blobs">
+            <div class="intro-blob ib-1"></div>
+            <div class="intro-blob ib-2"></div>
+            <div class="intro-blob ib-3"></div>
+        </div>
+    </div>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-blob a-blob-1" id="aBlob1"></div>
+        <div class="ambient-blob a-blob-2" id="aBlob2"></div>
+        <div class="ambient-blob a-blob-3" id="aBlob3"></div>
+        <div class="ambient-blob a-blob-4" id="aBlob4"></div>
+        <div class="ambient-blob a-blob-5" id="aBlob5"></div>
+    </div>
+
+    <!-- Header / Navigation Bar -->
+    <header id="header" class="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo" id="nav-logo">
+                <span class="logo-circle">GP</span>
+                <span class="logo-text">Gieramae<span>Pamor</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle-btn" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-blobs">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+                <div class="blob blob-4"></div>
+            </div>
+            
+            <div class="container hero-container" style="padding-top: 20px;">
+                <div class="hero-split-layout fade-in">
+                    
+                    <div class="hero-split-text compact-hero-text">
+                        <div class="hero-greeting-badge">👋 WELCOME TO MY PORTFOLIO</div>
+                        
+                        <h1 class="hero-title-compact">
+                            I'm<span class="highlight-pink"> Gieramae,</span><br>
+                            Computer <span class="text-gray">Engineer</span><br>
+                            & Web <span class="text-gray">Developer</span>
+                        </h1>
+                        
+                        <p class="hero-description-compact">
+                            I build modern web applications, digital products, and innovative systems bridging hardware and software design.
+                        </p>
+
+                        <div class="hero-tech-pills">
+                            <span class="hero-tech-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="hero-tech-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="hero-tech-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        </div>
+
+                        <div class="hero-social-icons">
+                            <a href="https://github.com/gieramaepamor-cmyk" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gieramaepamor/" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:gieramaegpamor@gmail.com" class="hero-social-icon" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-split-image">
+                        <div class="hero-portrait-circle">
+                            <div class="profile-circle-backdrop"></div>
+                            <img src="assets/images/profile.png" alt="Gieramae Pamor" class="profile-arch-img photo-front">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="hero-divider-strips">
+            <div class="divider-strip-gray">
+                <div class="divider-marquee-track">
+                    <div class="divider-marquee-content">
+                        <span class="divider-role">Web Developer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">UI / UX Designer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Software Engineer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Web Developer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">UI / UX Designer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Software Engineer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Web Developer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">UI / UX Designer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Software Engineer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Web Developer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">UI / UX Designer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                        <span class="divider-role">Software Engineer</span>
+                        <span class="divider-sep"><i class="fa-solid fa-asterisk"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-stripe-dark"></div>
+            <div class="divider-stripe-white"></div>
+            <div class="divider-stripe-gap"></div>
+            <div class="divider-strip-pink"></div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <div class="agency-section-label"><span class="agency-dot">✦</span> My Work</div>
+                    <h2 class="agency-section-title">Projects, Certifications <br>& <em>Tech Stack</em></h2>
+                </div>
+                
+                <div class="giera-tabs-wrap">
+                    <div class="giera-tabs" id="portfolio-tabs" role="tablist">
+                        <button class="giera-tab active" data-tab="projects" role="tab"><i class="fa-solid fa-briefcase"></i> Projects</button>
+                        <button class="giera-tab" data-tab="certificates" role="tab"><i class="fa-solid fa-award"></i> Certificates</button>
+                        <button class="giera-tab" data-tab="techstack" role="tab"><i class="fa-solid fa-code"></i> Tech Stack</button>
+                    </div>
+
+                    <div class="giera-tab-panel active" id="tab-projects">
+                        <div class="agency-projects-grid" id="projects-grid">
+
+                            <div class="agency-card scroll-reveal" id="project-tempguard">
+                                <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                    <img src="assets/projects/tempguard.png" alt="TempGuard" style="width:100%; height:100%; object-fit:cover;">
+                                    <div class="agency-card-img-overlay"></div>
+                                </div>
+                                <div class="agency-card-body">
+                                    <h3 class="agency-card-title">Tempguard</h3>
+                                    <p class="agency-card-desc">An award-winning capstone project that combines IoT and web technologies to monitor environmental conditions in real time. The system provides temperature and humidity tracking, predictive heat index forecasting, and automated alerts through a web-based dashboard.</p>
+                                    <div class="agency-card-footer">
+                                        <a href="https://tempguard-system.web.app/" target="_blank" class="agency-card-demo">View Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        <button class="agency-card-details" data-project="project-tempguard">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="agency-card scroll-reveal" id="project-timplados">
+                                <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                    <img src="assets/projects/timplados.png" alt="Timplados Restaurant" style="width:100%; height:100%; object-fit:cover;">
+                                    <div class="agency-card-img-overlay"></div>
+                                </div>
+                                <div class="agency-card-body">
+                                    <h3 class="agency-card-title">Timplados Restaurant</h3>
+                                    <p class="agency-card-desc">A modern restaurant landing page developed using HTML5 and CSS3, featuring a responsive design and clean user interface tailored for showcasing restaurant information and branding.</p>
+                                    <div class="agency-card-footer">
+                                        <a href="https://gieramaepamor-cmyk.github.io/Timplados-Website/" target="_blank" class="agency-card-demo">View Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        <button class="agency-card-details" data-project="project-timplados">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="agency-card scroll-reveal" id="project-adventure">
+                                <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                    <img src="assets/projects/finaladventure.png" alt="Final Adventure" style="width:100%; height:100%; object-fit:cover;">
+                                    <div class="agency-card-img-overlay"></div>
+                                </div>
+                                <div class="agency-card-body">
+                                    <h3 class="agency-card-title">The Final Adventure</h3>
+                                    <p class="agency-card-desc">A 2D web-based adventure game developed as an individual project using the Godot Engine. The game features player exploration, interactive environments, and browser-based gameplay, and is publicly accessible through GitHub Pages.</p>
+                                    <div class="agency-card-footer">
+                                        <a href="https://gieramaepamor-cmyk.github.io/Final-Adventure-Godot-Engine/" target="_blank" class="agency-card-demo">Play Game <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        <button class="agency-card-details" data-project="project-adventure">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="agency-card scroll-reveal" id="project-pos">
+                                <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                    <img src="assets/projects/ghillanz.png" alt="Ghillan'z POS System" style="width:100%; height:100%; object-fit:cover;">
+                                    <div class="agency-card-img-overlay"></div>
+                                </div>
+                                <div class="agency-card-body">
+                                    <h3 class="agency-card-title">Ghillan'z POS System</h3>
+                                    <p class="agency-card-desc">A desktop Point-of-Sale (POS) application developed using VB.NET in Visual Studio. The system streamlines retail transactions through user authentication, inventory management, and automated sales processing.</p>
+                                    <div class="agency-card-footer">
+                                        <button class="agency-card-demo video-demo-trigger" data-video="assets/vids/POS.mp4" data-title="Ghillan'z POS System">Live Demo <i class="fa-solid fa-play"></i></button>
+                                        <button class="agency-card-details" data-project="project-pos">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="agency-card scroll-reveal" id="project-piglet">
+                                <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                    <img src="assets/projects/pigletescape.png" alt="Piglet Escape" style="width:100%; height:100%; object-fit:cover;">
+                                    <div class="agency-card-img-overlay"></div>
+                                </div>
+                                <div class="agency-card-body">
+                                    <h3 class="agency-card-title">Piglet Escape</h3>
+                                    <p class="agency-card-desc">A 2D Android mobile game developed using Java and Android Studio. The game features touch-based controls, obstacle navigation, and score tracking designed for a smooth mobile gaming experience.</p>
+                                    <div class="agency-card-footer">
+                                        <button class="agency-card-demo video-demo-trigger" data-video="assets/vids/PigletEscape.mp4" data-title="Piglet Escape">Live Demo <i class="fa-solid fa-play"></i></button>
+                                        <button class="agency-card-details" data-project="project-piglet">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="giera-tab-panel" id="tab-certificates">
+                        <div class="giera-tabs" style="margin-top: -20px; margin-bottom: 30px;">
+                            <button class="cert-subtab active" data-subtab="subtab-training"><i class="fa-solid fa-medal"></i> Training</button>
+                            <button class="cert-subtab" data-subtab="subtab-seminars"><i class="fa-solid fa-chalkboard-user"></i> Seminars</button>
+                        </div>
+
+                        <div class="cert-subpanel active" id="subtab-training">
+                            <div class="projects-grid">
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Training1.png" alt="Training Certificate 1" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Web &amp; Mobile Solutions with HTML, JS &amp; CSS</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> March 2024</span>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Training1.png">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Training2.jpg" alt="Training Certificate 2" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Introduction to Cybersecurity</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                                            <span><i class="fa-regular fa-calendar"></i> December 2025</span>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Training2.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Training3.jpg" alt="Training Certificate 3" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Product Training Certification</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> Decisions Training (Xentra Solutions, Inc.)</span>
+                                            <span><i class="fa-regular fa-calendar"></i> February 2026</span>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Training3.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-subpanel" id="subtab-seminars">
+                            <div class="projects-grid">
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Seminar1.png" alt="Seminar 1" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Emerging Future Technologies</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> February 2026</span>
+                                            <p style="margin-top: 8px;">Speaker: Engr. Rannie Ollit</p>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Seminar1.png">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Seminar2.png" alt="Seminar 2" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Hardware and Embedded Systems</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> February 2026</span>
+                                            <p style="margin-top: 8px;">Speaker: Engr. Yeoj Mariano</p>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Seminar2.png">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Seminar3.png" alt="Seminar 3" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Smart Features: Understanding Artificial Intelligence Today</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> February 2026</span>
+                                            <p style="margin-top: 8px;">Speaker: Mr. Axl Louis Coronel</p>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Seminar3.png">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Seminar4.jpg" alt="Seminar 4" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Basic and Fundamentals of Front End Development (HTML, CSS, JavaScript)</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> March 2026</span>
+                                            <p style="margin-top: 8px;">Speaker: Mr. Jezreel Christian Bacasno</p>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Seminar4.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agency-card scroll-reveal">
+                                    <div class="agency-card-img" style="height: 200px; padding: 0;">
+                                        <img src="assets/certificates/Seminar5.jpg" alt="Seminar 5" style="width:100%; height:100%; object-fit:cover;">
+                                        <div class="agency-card-img-overlay"></div>
+                                    </div>
+                                    <div class="agency-card-body">
+                                        <h3 class="agency-card-title" style="margin-bottom: 8px;">Understanding Mobile-Based Cyber Threats: The Role of CyberSecurity Education and Awareness in Protecting Filipino</h3>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                            <span style="display:block; margin-bottom:4px;"><i class="fa-solid fa-building-columns"></i> La Consolacion University Philippines</span>
+                                            <span><i class="fa-regular fa-calendar"></i> March 2026</span>
+                                            <p style="margin-top: 8px;">Speaker: Engr. Joseph Conrad Isidro</p>
+                                        </div>
+                                        <div class="agency-card-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                                            <button class="agency-card-demo cert-modal-trigger" data-img="assets/certificates/Seminar4.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="giera-tab-panel" id="tab-techstack">
+                        <div class="giera-tabs" style="margin-top: -20px; margin-bottom: 30px;">
+                            <button class="tech-subtab active" data-subtab="tech-all"><i class="fa-solid fa-border-all"></i> All</button>
+                            <button class="tech-subtab" data-subtab="tech-programming"><i class="fa-solid fa-code"></i> Programming</button>
+                            <button class="tech-subtab" data-subtab="tech-db"><i class="fa-solid fa-database"></i> DB & IDEs</button>
+                            <button class="tech-subtab" data-subtab="tech-tools"><i class="fa-solid fa-wrench"></i> Tools</button>
+                        </div>
+
+                        <div class="tech-subpanel active" id="tech-all">
+                            <div class="giera-scroll-grid">
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/html.png" alt="HTML"><span>HTML</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/css.png" alt="CSS"><span>CSS</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/js.png" alt="JavaScript"><span>JavaScript</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/vbnet.png" alt="Visual Basic.NET"><span>Visual Basic.NET</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/vscode.png" alt="VS Code"><span>VS Code</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/visualbasic.png" alt="Visual Studio IDE"><span>Visual Studio IDE</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/mysql.png" alt="MySQL"><span>MySQL</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/firebase.png" alt="Firebase"><span>Firebase</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/arduinoide.png" alt="Arduino IDE"><span>Arduino IDE</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/androidstudio.png" alt="Android Studio"><span>Android Studio</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/godot.png" alt="Godot Engine"><span>Godot Engine</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/git.png" alt="Git"><span>Git</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/github.png" alt="GitHub"><span>GitHub</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/figma.png" alt="Figma"><span>Figma</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/canva.png" alt="Canva"><span>Canva</span></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-subpanel" id="tech-programming">
+                            <div class="giera-scroll-grid">
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/html.png" alt="HTML"><span>HTML</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/css.png" alt="CSS"><span>CSS</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/js.png" alt="JavaScript"><span>JavaScript</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/vbnet.png" alt="Visual Basic.NET"><span>Visual Basic.NET</span></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-subpanel" id="tech-db">
+                            <div class="giera-scroll-grid">
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/visualbasic.png" alt="Visual Studio IDE"><span>Visual Studio IDE</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/vscode.png" alt="VS Code"><span>VS Code</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/mysql.png" alt="MySQL"><span>MySQL</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/firebase.png" alt="Firebase"><span>Firebase</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/arduinoide.png" alt="Arduino IDE"><span>Arduino IDE</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/androidstudio.png" alt="Android Studio"><span>Android Studio</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/godot.png" alt="Godot Engine"><span>Godot Engine</span></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-subpanel" id="tech-tools">
+                            <div class="giera-scroll-grid">
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/git.png" alt="Git"><span>Git</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/github.png" alt="GitHub"><span>GitHub</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/figma.png" alt="Figma"><span>Figma</span></div>
+                                <div class="giera-tech-icon-card scroll-reveal"><img src="assets/tech/canva.png" alt="Canva"><span>Canva</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="about-agency-grid">
+                    
+                    <div class="about-agency-img-col scroll-reveal">
+                        <div class="about-agency-img-wrap">
+                            <div class="about-agency-img-glow"></div>
+                            <img src="assets/images/grad.png" alt="Gieramae Pamor" class="about-agency-img">
+                            
+                            <div class="about-agency-badge">
+                                <i class="fa-solid fa-award"></i>
+                                <div>
+                                    <strong>Magna Cum Laude</strong>
+                                    <span>BS Computer Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-agency-text-col scroll-reveal" style="align-self: center;">
+                        <div class="agency-section-label"><span class="agency-dot">✦</span> About Me</div>
+                        <h2 class="agency-section-title">Turning Ideas Into <em>Digital</em> Masterpieces</h2>
+                        <p class="about-agency-bio">I am a recent Computer Engineering graduate from La Consolacion University Philippines with a strong foundation in software engineering and hardware systems. Passionate about creating clean, functional, and user-centered digital solutions through web development, UI/UX design, and IoT integration.</p>
+                        
+                        <div class="about-agency-stats">
+                            <div class="about-agency-stat">
+                                <span class="agency-stat-num">5<span class="agency-stat-plus">+</span></span>
+                                <span class="agency-stat-label">Projects<br>Completed</span>
+                            </div>
+                            <div class="about-agency-stat">
+                                <span class="agency-stat-num">8<span class="agency-stat-plus">+</span></span>
+                                <span class="agency-stat-label">Certificates<br>Earned</span>
+                            </div>
+                            <div class="about-agency-stat">
+                                <span class="agency-stat-num">3<span class="agency-stat-plus">+</span></span>
+                                <span class="agency-stat-label">Tech Stacks<br>Mastered</span>
+                            </div>
+                        </div>
+                        
+                        <div class="about-agency-pills">
+                            <span class="agency-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="agency-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="agency-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="agency-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title-gradient">Get In Touch</h2>
+                    <p class="section-subtitle-giera">Open for opportunities — let's create something great together</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-column scroll-reveal">
+                        <div class="giera-contact-intro">
+                            <h3>Let's collaborate!</h3>
+                            <p>I am seeking entry-level roles and am excited to bring my passion, diligence, and technical skills to your software development team. Feel free to reach out directly.</p>
+                        </div>
+                        <div class="contact-cards-container">
+                            <a href="mailto:gieramaegpamor@gmail.com" class="giera-contact-card" id="contact-email">
+                                <div class="giera-contact-icon email-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="giera-contact-text">
+                                    <span class="giera-contact-label">Email Me</span>
+                                    <span class="giera-contact-value">gieramaegpamor@gmail.com</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-right giera-contact-arrow"></i>
+                            </a>
+                            <a href="tel:+639286621083" class="giera-contact-card" id="contact-phone">
+                                <div class="giera-contact-icon phone-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="giera-contact-text">
+                                    <span class="giera-contact-label">Call Me</span>
+                                    <span class="giera-contact-value">+63 928 662 1083</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-right giera-contact-arrow"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gieramaepamor/" target="_blank" rel="noopener noreferrer" class="giera-contact-card" id="contact-linkedin">
+                                <div class="giera-contact-icon linkedin-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div class="giera-contact-text">
+                                    <span class="giera-contact-label">LinkedIn</span>
+                                    <span class="giera-contact-value">linkedin.com/in/gieramaepamor</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-right giera-contact-arrow"></i>
+                            </a>
+                            <a href="https://github.com/gieramaepamor-cmyk" target="_blank" rel="noopener noreferrer" class="giera-contact-card" id="contact-github">
+                                <div class="giera-contact-icon github-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="giera-contact-text">
+                                    <span class="giera-contact-label">GitHub</span>
+                                    <span class="giera-contact-value">github.com/gieramaepamor-cmyk</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-right giera-contact-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-column scroll-reveal">
+                        <div class="giera-form-card">
+                            <div class="giera-form-card-glow"></div>
+                            <h3 class="form-title">Send a Message</h3>
+                            <form id="portfolio-contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-name">Your Name</label>
+                                        <div class="input-wrapper">
+                                            <i class="fa-regular fa-user input-icon"></i>
+                                            <input type="text" id="form-name" required placeholder="Jane Doe">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-email">Your Email</label>
+                                        <div class="input-wrapper">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="form-email" required placeholder="jane.doe@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-subject">Subject</label>
+                                        <div class="input-wrapper">
+                                            <i class="fa-regular fa-folder-open input-icon"></i>
+                                            <input type="text" id="form-subject" required placeholder="Job Opportunity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-message">Message</label>
+                                        <div class="input-wrapper">
+                                            <i class="fa-regular fa-comments textarea-icon"></i>
+                                            <textarea id="form-message" required rows="5" placeholder="Hi Gieramae, I viewed your portfolio and would love to schedule an interview..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-giera-primary submit-btn" id="contact-submit-btn" style="width:100%;justify-content:center;">
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <a href="#hero" class="logo footer-logo" id="footer-nav-logo">
+                    <span class="logo-circle">GP</span>
+                    <span class="logo-text">Gieramae<span>Pamor</span></span>
+                </a>
+                
+                <ul class="footer-nav">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Gieramae Pamor. All Rights Reserved. Computer Engineering Graduate.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/gieramaepamor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gieramaepamor-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/gieramae.pamor.7" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="video-demo-modal" class="agency-modal" aria-hidden="true">
+        <div class="agency-modal-backdrop" id="video-modal-backdrop"></div>
+        <div class="video-modal-panel">
+            <div class="video-modal-header">
+                <span id="video-modal-title" class="video-modal-title"></span>
+                <button class="agency-modal-close video-modal-close-btn" aria-label="Close video" id="video-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="video-modal-body">
+                <video id="video-modal-player" controls playsinline preload="none" style="width:100%; border-radius: 0 0 16px 16px; background:#000; display:block; max-height:75vh;"></video>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificate-modal" class="agency-modal" aria-hidden="true">
+        <div class="agency-modal-backdrop"></div>
+        <div class="agency-modal-panel" style="max-width: 800px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <button class="agency-modal-close" aria-label="Close modal" id="cert-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="agency-modal-inner" style="padding: 30px; display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
+                <img id="cert-modal-img" src="" alt="Certificate Full Size" style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" id="scroll-to-top-btn" aria-label="Scroll back to top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
