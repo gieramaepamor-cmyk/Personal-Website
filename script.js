@@ -52,16 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isDetailsPage) {
         if (mobileNavToggle) mobileNavToggle.addEventListener('click', toggleMobileNav);
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMobileNav);
-        });
-
-        document.addEventListener('click', (event) => {
-            const isClickInsideNav = (navMenu && navMenu.contains(event.target)) || (mobileNavToggle && mobileNavToggle.contains(event.target));
-            if (!isClickInsideNav && navMenu && navMenu.classList.contains('open')) {
-                closeMobileNav();
-            }
-        });
+        // Removed link click and outside click listeners per user request
+        // It will now only close when the mobileNavToggle (X) is clicked
 
         const handleScroll = () => {
             if (header) {
