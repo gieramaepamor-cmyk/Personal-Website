@@ -409,5 +409,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const contactForm = document.getElementById('portfolio-contact-form');
-    // We are now using native form submission for FormSubmit so the user sees the activation page
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('contact-submit-btn');
+            if (submitBtn) {
+                submitBtn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
+                submitBtn.disabled = true;
+            }
+
+            const formData = {
+                access_key: '66c140e9-8378-4926-8700-31dfbd41154d',
+                name: document.getElementById('form-name').value.trim(),
+                email: document.getElementById('form-email').value.trim(),
+                subject: document.getElementById('form-subject').value.trim(),
+                message: document.getElementById('form-message').value.trim()
+            };
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    if (submitBtn) {
+                        submitBtn.innerHTML = '<span>Sent Successfully!</span><i class="fa-solid fa-check"></i>';
+                        submitBtn.style.background = '#4CAF50';
+                        setTimeout(() => {
+                            submitBtn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
+                            submitBtn.style.background = '';
+                            submitBtn.disabled = false;
+                            contactForm.reset();
+                        }, 3000);
+                    }
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (err) {
+                console.error('Error:', err);
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<span>Failed to send</span><i class="fa-solid fa-xmark"></i>';
+                    submitBtn.style.background = '#e74c3c';
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            }
+        });
+    }
 });
