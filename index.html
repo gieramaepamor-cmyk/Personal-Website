@@ -75,6 +75,11 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="mobile-nav-socials">
+                    <a href="https://github.com/gieramaepamor-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gieramaepamor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:gieramaegpamor@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
             </nav>
 
             <div class="header-actions">
@@ -197,7 +202,7 @@
                     </div>
 
                     <div class="giera-tab-panel active" id="tab-projects">
-                        <div class="agency-projects-grid" id="projects-grid">
+                        <div class="agency-projects-grid show-more-collapsed" id="projects-grid">
 
                             <div class="agency-card scroll-reveal" id="project-tempguard">
                                 <div class="agency-card-img" style="height: 200px; padding: 0;">
@@ -275,6 +280,9 @@
                             </div>
 
                         </div>
+                        <div class="show-more-container">
+                            <button class="show-more-btn" onclick="toggleShowMore(this)">Show More <i class="fa-solid fa-chevron-down"></i></button>
+                        </div>
                     </div>
 
                     <div class="giera-tab-panel" id="tab-certificates">
@@ -284,7 +292,7 @@
                         </div>
 
                         <div class="cert-subpanel active" id="subtab-training">
-                            <div class="projects-grid">
+                            <div class="projects-grid show-more-collapsed">
                                 <div class="agency-card scroll-reveal">
                                     <div class="agency-card-img" style="height: 200px; padding: 0;">
                                         <img src="assets/certificates/Training1.png" alt="Training Certificate 1" style="width:100%; height:100%; object-fit:cover;">
@@ -336,10 +344,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="show-more-container">
+                                <button class="show-more-btn" onclick="toggleShowMore(this)">Show More <i class="fa-solid fa-chevron-down"></i></button>
+                            </div>
                         </div>
 
                         <div class="cert-subpanel" id="subtab-seminars">
-                            <div class="projects-grid">
+                            <div class="projects-grid show-more-collapsed">
                                 <div class="agency-card scroll-reveal">
                                     <div class="agency-card-img" style="height: 200px; padding: 0;">
                                         <img src="assets/certificates/Seminar1.png" alt="Seminar 1" style="width:100%; height:100%; object-fit:cover;">
@@ -429,6 +440,9 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="show-more-container">
+                                <button class="show-more-btn" onclick="toggleShowMore(this)">Show More <i class="fa-solid fa-chevron-down"></i></button>
                             </div>
                         </div>
                     </div>
@@ -704,6 +718,37 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const containers = document.querySelectorAll('.show-more-container');
+            containers.forEach(container => {
+                const grid = container.previousElementSibling;
+                if (grid && grid.querySelectorAll('.agency-card').length <= 3) {
+                    container.style.display = 'none';
+                    // Optional: remove the class so it doesn't get collapsed at all
+                    grid.classList.remove('show-more-collapsed');
+                }
+            });
+        });
+
+        function toggleShowMore(btn) {
+            const container = btn.parentElement.previousElementSibling;
+            if (container && container.classList.contains('show-more-collapsed')) {
+                container.classList.remove('show-more-collapsed');
+                btn.innerHTML = 'Show Less <i class="fa-solid fa-chevron-up"></i>';
+            } else if (container) {
+                container.classList.add('show-more-collapsed');
+                btn.innerHTML = 'Show More <i class="fa-solid fa-chevron-down"></i>';
+                const headerOffset = 100;
+                const elementPosition = container.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
