@@ -417,26 +417,59 @@ document.addEventListener('DOMContentLoaded', () => {
             const email   = document.getElementById('form-email').value.trim();
             const subject = document.getElementById('form-subject').value.trim();
             const message = document.getElementById('form-message').value.trim();
-
-            const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-
-            const mailtoURL = `mailto:gieramaegpamor@gmail.com`
-                + `?subject=${encodeURIComponent(subject)}`
-                + `&body=${encodeURIComponent(body)}`;
-
-            window.location.href = mailtoURL;
-
             const submitBtn = document.getElementById('contact-submit-btn');
+            
             if (submitBtn) {
-                const original = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<span>Opening Email App…</span><i class="fa-solid fa-check"></i>';
+                submitBtn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
                 submitBtn.disabled = true;
-                setTimeout(() => {
-                    submitBtn.innerHTML = original;
-                    submitBtn.disabled = false;
-                    contactForm.reset();
-                }, 3000);
             }
+
+            // Using FormSubmit for direct email sending without backend
+            fetch("https://formsubmit.co/ajax/gieramaegpamor@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    _subject: subject,
+                    message: message,
+                    _template: "table"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<span>Sent Successfully!</span><i class="fa-solid fa-check"></i>';
+                    submitBtn.style.background = 'var(--success-color, #4CAF50)';
+                    submitBtn.style.borderColor = 'var(--success-color, #4CAF50)';
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
+                        submitBtn.style.background = '';
+                        submitBtn.style.borderColor = '';
+                        submitBtn.disabled = false;
+                        contactForm.reset();
+                    }, 3000);
+                }
+            })
+            .catch(error => {
+                console.error("Error sending message:", error);
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<span>Failed to send</span><i class="fa-solid fa-xmark"></i>';
+                    submitBtn.style.background = '#e74c3c';
+                    submitBtn.style.borderColor = '#e74c3c';
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
+                        submitBtn.style.background = '';
+                        submitBtn.style.borderColor = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            });
         });
     }
 });
