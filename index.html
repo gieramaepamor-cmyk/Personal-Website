@@ -12,7 +12,7 @@
     <meta property="og:description" content="Discover the professional portfolio of Gieramae Pamor—showcasing software engineering, web development, and embedded systems projects.">
     <meta property="og:image" content="assets/images/profile.png">
     
-    <title>Gieramae Pamor | Computer Engineering Graduate Portfolio</title>
+    <title>Gieramae Pamor | Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -612,13 +612,15 @@
                         <div class="giera-form-card">
                             <div class="giera-form-card-glow"></div>
                             <h3 class="form-title">Send a Message</h3>
-                            <form id="portfolio-contact-form">
+                            <form id="portfolio-contact-form" action="https://formsubmit.co/gieramaegpamor@gmail.com" method="POST">
+                                <input type="hidden" name="_next" value="https://gieramaepamor-cmyk.github.io/Personal-Website/">
+                                <input type="hidden" name="_captcha" value="false">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="form-name">Your Name</label>
                                         <div class="input-wrapper">
                                             <i class="fa-regular fa-user input-icon"></i>
-                                            <input type="text" id="form-name" required placeholder="Jane Doe">
+                                            <input type="text" id="form-name" name="name" required placeholder="Jane Doe">
                                         </div>
                                     </div>
                                 </div>
@@ -627,7 +629,7 @@
                                         <label for="form-email">Your Email</label>
                                         <div class="input-wrapper">
                                             <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="email" id="form-email" required placeholder="jane.doe@example.com">
+                                            <input type="email" id="form-email" name="email" required placeholder="jane.doe@example.com">
                                         </div>
                                     </div>
                                 </div>
@@ -636,7 +638,7 @@
                                         <label for="form-subject">Subject</label>
                                         <div class="input-wrapper">
                                             <i class="fa-regular fa-folder-open input-icon"></i>
-                                            <input type="text" id="form-subject" required placeholder="Job Opportunity">
+                                            <input type="text" id="form-subject" name="_subject" required placeholder="Job Opportunity">
                                         </div>
                                     </div>
                                 </div>
@@ -645,7 +647,7 @@
                                         <label for="form-message">Message</label>
                                         <div class="input-wrapper">
                                             <i class="fa-regular fa-comments textarea-icon"></i>
-                                            <textarea id="form-message" required rows="5" placeholder="Hi Gieramae, I viewed your portfolio and would love to schedule an interview..."></textarea>
+                                            <textarea id="form-message" name="message" required rows="5" placeholder="Hi Gieramae, I viewed your portfolio and would love to schedule an interview..."></textarea>
                                         </div>
                                     </div>
                                 </div>
