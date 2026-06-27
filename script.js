@@ -7,6 +7,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Typewriter effect logic
+    const typewriterElement = document.getElementById('typewriter-role');
+    if (typewriterElement) {
+        const roles = ['Web Developer', 'UI/UX Designer'];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typingSpeed = isDeleting ? 50 : 100; // Delete faster than typing
+            
+            if (!isDeleting && charIndex === currentRole.length) {
+                typingSpeed = 2000; // Pause at the end of typing before deleting
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length; // Move to the next word
+                typingSpeed = 500; // Pause before typing the next word
+            }
+            
+            setTimeout(typeWriter, typingSpeed);
+        }
+        
+        // Start the effect after a slight delay
+        setTimeout(typeWriter, 1000);
+    }
+
     htmlElement.setAttribute('data-theme', 'dark');
     localStorage.removeItem('theme');
 
