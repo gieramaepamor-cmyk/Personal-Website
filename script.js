@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typewriter effect logic
     const typewriterElement = document.getElementById('typewriter-role');
     if (typewriterElement) {
-        const roles = ['Web Developer', 'UI/UX Designer'];
+        const roles = ['Web Developer', 'UI/UX Designer', 'Software Engineer'];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
